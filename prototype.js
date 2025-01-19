@@ -17,3 +17,19 @@ console.log("Hello");
 console.log("Hello".toLowerCase());
 console.log(546234);
 console.log((546234).toString());
+
+
+function Movie( title, releasedYear){
+this.title = title;
+this.releasedYear = releasedYear;
+}
+
+//We must use 'function' when assign to prototype
+//Other wise 'this' will be a global object
+//Window in the browser, undefined in node.
+Movie.prototype.logInfo = function() {
+console.log(`${this.title} was released in ${this.releasedYear} `);
+};
+
+const theLionKing = new Movie("The Lion King", 1982)
+theLionKing.logInfo();
