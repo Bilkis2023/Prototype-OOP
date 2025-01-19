@@ -33,3 +33,30 @@ console.log(`${this.title} was released in ${this.releasedYear} `);
 
 const theLionKing = new Movie("The Lion King", 1982)
 theLionKing.logInfo();
+
+//boolean:
+console.log(theLionKing.hasOwnProperty('title'));
+console.log(theLionKing.hasOwnProperty('logInfo'));
+console.log(Movie.prototype.hasOwnProperty('logInfo'));
+
+// node prototype.js
+// [ 2, 4, 5, 6, 7 ]
+// 2
+// 4
+// 5
+// 6
+// 7
+// 4
+// 8
+// 10
+// 12
+// 14
+// { name: 'Samantha', age: 25, occupation: 'Curriculum Dev' }
+// Hello
+// hello
+// 546234
+// 546234
+// The Lion King was released in 1982
+// true
+// false
+// true
